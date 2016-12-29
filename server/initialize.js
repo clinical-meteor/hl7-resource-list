@@ -3,6 +3,5 @@ Meteor.startup(function () {
   if (process.env.INITIALIZE) {
     console.log('INITIALZING');
 
-    };
-  }
+  };
 });

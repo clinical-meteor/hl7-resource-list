@@ -25,64 +25,63 @@ INITIALIZE=true meteor
 
 ```js
 var nyQuill = {
-  code: {
-    text: "NyQuill"
-  },
-  isBrand: true,
-  manufacturer: {
-    display: 'VICKS',
-    reference: ''
-  },
-  product: {
-    form: {
-      text: 'liquid'
-    },
-    ingredient: [{
-      item: {
-        resourceType: 'Substance',
-        code: {
-          text: 'Acetaminophen'
-        },
-        description: 'Pain reliever/fever reducer.'
-      },
-      instance: [{
-        quantity: '650 mg'
-      }]
-    },{
-      item: {
-        resourceType: 'Substance',
-        code: {
-          text: 'Dextromethorphan HBr'
-        },
-        description: 'Cough suppressant.'
-      },
-      instance: [{
-        quantity: '30 mg'
-      }]
-    },{
-      item: {
-        resourceType: 'Substance',
-        code: {
-          text: 'Doxylamine succinate'
-        },
-        description: 'Antihistamine.'
-      },
-      instance: [{
-        quantity: '12.5 mg'
-      }]
-    }]
-  },
-  package: {
-    container: {
-      text: 'vial'
-    },
-    content: [{
-      amount: {
-        value: 12,
-        unit: 'fl oz'
+  "resourceType": "List",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "182836005",
+        "display": "Review of medication"
       }
-    }]
-  }
+    ],
+    "text": "Medication Review"
+  },
+  "source": {
+    "reference": "Patient/example"
+  },
+  "status": "current",
+  "date": "2013-11-20T23:10:23+11:00",
+  "mode": "changes",
+  "entry": [
+    {
+      "fhir_comments": [
+        "  \n      in a real medications list, we'd actually have medication resources.\n      but this an example to demonstrate a changes list, so we'll just use \n      display  "
+      ],
+      "flag": {
+        "fhir_comments": [
+          "  patient was prescribed hydroxocobalamin. the flag marks this \n       as a prescription. Note that healthcare workers will now get into\n       a long debate the exact implication of \"prescribed\". That's why the\n       spec doesn't fix the flag values  "
+        ],
+        "coding": [
+          {
+            "system": "http://nehta.gov.au/codes/medications/changetype",
+            "code": "01",
+            "display": "Prescribed"
+          }
+        ]
+      },
+      "item": {
+        "display": "hydroxocobalamin"
+      }
+    },
+    {
+      "fhir_comments": [
+        " \n     on this one, we record that the patient was taken off morphine sulfate.\n     because not every system knows the flags, and the ensure there's no confusion,\n     if the flag implies that something was removed from the list, then the\n     deleted element must also be set \n   "
+      ],
+      "flag": {
+        "coding": [
+          {
+            "system": "http://nehta.gov.au/codes/medications/changetype",
+            "code": "02",
+            "display": "Cancelled"
+          }
+        ]
+      },
+      "deleted": true,
+      "item": {
+        "display": "Morphine Sulfate"
+      }
+    }
+  ]
 }
 Lists.insert(nyQuill);
 ```
