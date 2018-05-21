@@ -242,16 +242,18 @@ Meteor.methods({
     });
   },
   dropChecklists: function (){
-    if (process.env.NODE_ENV === 'test') {
-      console.log('-----------------------------------------');
-      console.log('Dropping lists... ');
-      Lists.find().forEach(function(list){
-        Lists.remove({_id: list._id});
-      });
-    } else {
-      console.log('This command can only be run in a test environment.');
-      console.log('Try setting NODE_ENV=test');
-    }  
+    // if (!process.env.NODE_ENV === 'production') {
+      if(this.userId){
+        console.log('-----------------------------------------');
+        console.log('Dropping lists... ');
+        Lists.find().forEach(function(list){
+          Lists.remove({_id: list._id});
+        });  
+      }
+    // } else {
+    //   console.log('This command can only be run in a test environment.');
+    //   console.log('Try setting NODE_ENV=test');
+    // }  
   }
 });
   
