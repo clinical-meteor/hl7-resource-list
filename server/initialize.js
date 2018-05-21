@@ -6,6 +6,46 @@ Meteor.methods({
     console.log('Initializing Lists...');
 
     var data = [
+      {name: "Immunization Schedule - Birth to 15 Months",
+        url: "https://www.cdc.gov/vaccines/schedules/hcp/imz/child-adolescent.html",
+        items: [
+          "Hepatitis B",
+          "Rotavirus",
+          "Diphtheria, tetanus, & acellular pertussis",
+          "Haemophilus influenzae type b",
+          "Pneumococcal conjugate",
+          "Inactivated poliovirus",
+          "Influenza",
+          "Measles, mumps, rubella",
+          "Varicella",
+          "Hepatitis A",
+          "Meningococcal",
+          "Tetanus, diphtheria, & acellular pertussis",
+          "Human papillomavirus",
+          "Meningococcal B",
+          "Pneumococcal polysaccharide"
+        ]
+      },
+      {name: "Immunization Schedule - 18 Months to 18 Years",
+        url: "https://www.cdc.gov/vaccines/schedules/hcp/imz/child-adolescent.html",
+        items: [
+          "Hepatitis B",
+          "Rotavirus",
+          "Diphtheria, tetanus, & acellular pertussis",
+          "Haemophilus influenzae type b",
+          "Pneumococcal conjugate",
+          "Inactivated poliovirus",
+          "Influenza",
+          "Measles, mumps, rubella",
+          "Varicella",
+          "Hepatitis A",
+          "Meningococcal",
+          "Tetanus, diphtheria, & acellular pertussis",
+          "Human papillomavirus",
+          "Meningococcal B",
+          "Pneumococcal polysaccharide"
+        ]
+      },      
       {name: "Collect Blood Specimen",
         url: "http://who.int/csr/resources/publications/ebola/blood-collect-en.pdf",
         items: [
