@@ -242,18 +242,19 @@ Meteor.methods({
     });
   },
   dropChecklists: function (){
+    console.log('Dropping checklists...')
     // if (!process.env.NODE_ENV === 'production') {
       if(this.userId){
         console.log('-----------------------------------------');
         console.log('Dropping lists... ');
-        Lists.find().forEach(function(list){
-          Lists.remove({_id: list._id});
-        });  
-      }
-    // } else {
-    //   console.log('This command can only be run in a test environment.');
-    //   console.log('Try setting NODE_ENV=test');
-    // }  
+        // Lists.find().forEach(function(list){
+        //   Lists.remove({_id: list._id});
+        // }); 
+        Lists.remove({}); 
+      } else {
+        console.log('Trying to drop checklists, but there doesnt seem to be a userId');
+      }  
+    // } 
   }
 });
   
