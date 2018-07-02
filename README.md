@@ -1,15 +1,14 @@
-##clinical:hl7-resource-list
+## clinical:hl7-resource-list  
 
 HL7 FHIR Resource - List
 
+[![CircleCI](https://circleci.com/gh/clinical-meteor/hl7-resource-list/tree/master.svg?style=svg)](https://circleci.com/gh/clinical-meteor/hl7-resource-list/tree/master)
 
-===============================
 #### Conformance Statement  
 
 The resource in this package implements the FHIR Patient Resource schema provided at  [https://www.hl7.org/fhir/list.html](https://www.hl7.org/fhir/list.html).  
 
 
-===============================
 #### Installation  
 
 ````bash
@@ -20,7 +19,6 @@ meteor add clinical:hl7-resource-list
 INITIALIZE=true meteor
 ````
 
-===============================
 #### Example   
 
 ```js
@@ -86,7 +84,6 @@ var nyQuill = {
 Lists.insert(nyQuill);
 ```
 
-===============================
 #### Extending the Schema
 
 ```js
@@ -104,7 +101,6 @@ Lists.attachSchema( ExtendedListSchema );
 
 
 
-===============================
 #### Utilities  
 
 If you're working with HL7 FHIR Resources, we recommend using [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en).
@@ -112,7 +108,6 @@ If you're working with HL7 FHIR Resources, we recommend using [Postman](https://
 
 
 
-===============================
 #### Licensing  
 
 ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
