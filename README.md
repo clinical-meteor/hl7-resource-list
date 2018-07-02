@@ -8,9 +8,9 @@
 
 [![CircleCI](https://circleci.com/gh/clinical-meteor/hl7-resource-list/tree/master.svg?style=svg)](https://circleci.com/gh/clinical-meteor/hl7-resource-list/tree/master)
 
-#### Conformance Statement  
+#### API Reference  
 
-The resource in this package implements the FHIR Patient Resource schema provided at  [https://www.hl7.org/fhir/list.html](https://www.hl7.org/fhir/list.html).  
+This package implements the FHIR List resource schema provided at  [https://www.hl7.org/fhir/list.html](https://www.hl7.org/fhir/list.html).  
 
 
 #### Installation  
