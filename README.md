@@ -2,8 +2,6 @@
 
 HL7 FHIR Resource - List
 
-[![CircleCI](https://circleci.com/gh/clinical-meteor/hl7-resource-list/tree/master.svg?style=svg)](https://circleci.com/gh/clinical-meteor/hl7-resource-list/tree/master)
-
 #### Conformance Statement  
 
 The resource in this package implements the FHIR Patient Resource schema provided at  [https://www.hl7.org/fhir/list.html](https://www.hl7.org/fhir/list.html).  
@@ -105,7 +103,9 @@ Lists.attachSchema( ExtendedListSchema );
 
 If you're working with HL7 FHIR Resources, we recommend using [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en).
 
+#### Integration & Verification Tests
 
+[![CircleCI](https://circleci.com/gh/clinical-meteor/hl7-resource-list/tree/master.svg?style=svg)](https://circleci.com/gh/clinical-meteor/hl7-resource-list/tree/master)
 
 
 #### Licensing  
