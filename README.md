@@ -1,7 +1,5 @@
 ## clinical:hl7-resource-list  
 
-HL7 FHIR Resource - List
-
 #### Licensing  
 
 ![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)
