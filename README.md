@@ -10,7 +10,7 @@
 
 #### API Reference  
 
-This package implements the FHIR List resource schema provided at  [https://www.hl7.org/fhir/list.html](https://www.hl7.org/fhir/list.html).  
+This package implements the FHIR List resource schema provided at  [https://www.hl7.org/fhir/DSTU2/list.html](https://www.hl7.org/fhir/DSTU2/list.html).  
 
 
 #### Installation  
