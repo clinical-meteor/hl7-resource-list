@@ -1,6 +1,6 @@
 Package.describe({
   name: 'clinical:hl7-resource-list',
-  version: '1.4.4',
+  version: '1.4.6',
   summary: 'HL7 FHIR Resource - List',
   git: 'https://github.com/clinical-meteor/hl7-resource-list',
   documentation: 'README.md'
@@ -25,7 +25,7 @@ Package.onUse(function (api) {
   }
 
   api.addFiles('lib/hl7-resource-list.js', ['client', 'server']);
-  api.addFiles('lib/initialize.js', ['client'] );
+  api.addFiles('lib/initialize.js', ['client', 'server'] );
 
   api.addFiles('server/rest.js', 'server');
 
